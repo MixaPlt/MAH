@@ -1,0 +1,17 @@
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\bin\Debug\MAH.exe.config
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH.csprojResolveAssemblyReference.cache
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MainWindow.g.cs
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\App.g.cs
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH_MarkupCompile.cache
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH_MarkupCompile.lref
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\bin\Debug\MAH.exe
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\bin\Debug\MAH.pdb
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MainWindow.baml
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH.g.resources
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH.Properties.Resources.resources
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH.csproj.GenerateResource.Cache
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH.exe
+D:\My\Documents\Projects\Visual Studio (C++)\MAH\MAH\obj\Debug\MAH.pdb
+d:\My\Documents\Projects\Visual Studio (C#)\MAH\MAH\bin\Debug\MAH.exe.config
+d:\My\Documents\Projects\Visual Studio (C#)\MAH\MAH\obj\Debug\MAH.exe
+d:\My\Documents\Projects\Visual Studio (C#)\MAH\MAH\obj\Debug\MAH.pdb

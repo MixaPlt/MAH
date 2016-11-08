@@ -1,0 +1,15 @@
+﻿<Window x:Class="MAH.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MAH" Background="#4B4BFF"
+        MinHeight="480" MinWidth="640"
+        mc:Ignorable="d" x:Name="mainWindow"
+        Title="FieldPuzzle" Height="480" Width="640">
+    <Grid>
+        <Canvas x:Name="mainCanvas">
+            
+        </Canvas>
+    </Grid>
+</Window>
