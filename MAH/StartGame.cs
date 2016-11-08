@@ -59,6 +59,9 @@ namespace MAH
             BackButton.MouseEnter += BooksMouseEnter;
             BackButton.MouseLeave += BooksMouseExit;
             BackButton.MouseUp += Back;
+            Books[0].MouseUp += B1;
+            Books[1].MouseUp += B2;
+            Books[2].MouseUp += B3;
             mainWindow.SizeChanged += WindowSizeChanged;
             WindowSizeChanged(null, null);
         }
@@ -114,6 +117,24 @@ namespace MAH
             mainWindow.SizeChanged -= WindowSizeChanged;
             MainMenu mainMenu = new MainMenu() { mainCanvas = mainCanvas, mainWindow = mainWindow };
             mainMenu.Build();
+        }
+        private void B1(object sender, MouseEventArgs e)
+        {
+            mainWindow.SizeChanged -= WindowSizeChanged;
+            BookList bookList = new BookList() { mainCanvas = mainCanvas, mainWindow = mainWindow, BookNumber = 0 };
+            bookList.Build();
+        }
+        private void B2(object sender, MouseEventArgs e)
+        {
+            mainWindow.SizeChanged -= WindowSizeChanged;
+            BookList bookList = new BookList() { mainCanvas = mainCanvas, mainWindow = mainWindow, BookNumber = 1 };
+            bookList.Build();
+        }
+        private void B3(object sender, MouseEventArgs e)
+        {
+            mainWindow.SizeChanged -= WindowSizeChanged;
+            BookList bookList = new BookList() { mainCanvas = mainCanvas, mainWindow = mainWindow, BookNumber = 2 };
+            bookList.Build();
         }
     }
 }

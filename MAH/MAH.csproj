@@ -56,9 +56,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BookList.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="LevelinList.cs" />
     <Compile Include="Levels.cs" />
+    <Compile Include="Progress.cs" />
     <Compile Include="StartGame.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -104,15 +106,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\Back_0.png" />
+    <Resource Include="Images\Back_1.png" />
     <Resource Include="Images\Book1.png" />
     <Resource Include="Images\Book2.png" />
     <Resource Include="Images\Book3.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Back_0.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Back_1.png" />
+    <Resource Include="Images\Stars0.png" />
+    <Resource Include="Images\Stars1.png" />
+    <Resource Include="Images\Stars2.png" />
+    <Resource Include="Images\Stars3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
