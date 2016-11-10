@@ -45,8 +45,8 @@ namespace MAH
             {
                 lvls[i] = new LevelinList() { Stars = s[i], Source = Stars[s[i]], Height = 200, Width = 200};
                 ScrollList.Children.Add(lvls[i]);
-                lvls[i].MouseEnter += TileMouseEnter;
-                lvls[i].MouseLeave += TileMouseLeave;
+                lvls[i].MouseEnter += ImageMouseEnter;
+                lvls[i].MouseLeave += ImageMouseLeave;
                 lvls[i].MouseUp += Start;
             }
             BitmapImage src3 = new BitmapImage();
@@ -55,8 +55,8 @@ namespace MAH
             src3.EndInit();
             BackButton = new Image { Source = src3 };
             mainCanvas.Children.Add(BackButton);
-            BackButton.MouseEnter += TileMouseEnter;
-            BackButton.MouseLeave += TileMouseLeave;
+            BackButton.MouseEnter += ImageMouseEnter;
+            BackButton.MouseLeave += ImageMouseLeave;
             BackButton.MouseUp += Back;
             WindowSizeChanged(null, null);
             mainWindow.SizeChanged += WindowSizeChanged;
@@ -76,8 +76,8 @@ namespace MAH
                 for(int j = 0; j < 4; j++)
                 {
                     lvls[i * 4 + j].Margin = margin;
-                    lvls[i * 4 + j].Height = h * 9 / 10;
-                    lvls[i * 4 + j].Width = h * 9 / 10;
+                    lvls[i * 4 + j].Height = h * 24 / 25;
+                    lvls[i * 4 + j].Width = h * 24 / 25;
                     margin.Left += h;
                 }
                 margin.Top += h;
@@ -86,8 +86,8 @@ namespace MAH
             for (int j = 0; j < LevelsNumber % 4; j++)
             {
                 lvls[LevelsNumber - LevelsNumber % 4 + j].Margin = margin;
-                lvls[LevelsNumber - LevelsNumber % 4 + j].Height = h * 9 / 10;
-                lvls[LevelsNumber - LevelsNumber % 4 + j].Width = h * 9 / 10;
+                lvls[LevelsNumber - LevelsNumber % 4 + j].Height = h * 24 / 25;
+                lvls[LevelsNumber - LevelsNumber % 4 + j].Width = h * 24 / 25;
                 margin.Left += h;
             }
             margin.Top = mainCanvas.Height * 9 / 10;
@@ -97,25 +97,25 @@ namespace MAH
             BackButton.Width = mainCanvas.Height / 4;
 
         }
-        private void TileMouseEnter(object sender, MouseEventArgs e)
+        private void ImageMouseEnter(object sender, MouseEventArgs e)
         {
             Image o = (Image)sender;
             Thickness margin = o.Margin;
-            margin.Top -= ScrollList.Width / 80;
-            margin.Left -= ScrollList.Width / 80;
+            margin.Top = o.Margin.Top - o.Height / 20;
+            margin.Left = o.Margin.Left - o.Width / 20;
+            o.Height = o.Height / 10 * 11;
+            o.Width = o.Width * 11 / 10;
             o.Margin = margin;
-            o.Height += ScrollList.Width / 40;
-            o.Width += ScrollList.Width / 40;
         }
-        private void TileMouseLeave(object sender, MouseEventArgs e)
+        private void ImageMouseLeave(object sender, MouseEventArgs e)
         {
             Image o = (Image)sender;
             Thickness margin = o.Margin;
-            margin.Top += ScrollList.Width / 80;
-            margin.Left += ScrollList.Width / 80;
+            o.Height = o.Height / 11 * 10;
+            o.Width = o.Width * 10 / 11;
+            margin.Top = o.Margin.Top + o.Height / 20;
+            margin.Left = o.Margin.Left + o.Width / 20;
             o.Margin = margin;
-            o.Height -= ScrollList.Width / 40;
-            o.Width -= ScrollList.Width / 40;
         }
         private void Back(object sender, MouseEventArgs e)
         {
@@ -133,7 +133,7 @@ namespace MAH
             if (o.Stars == 0)
             {
                 mainWindow.SizeChanged -= WindowSizeChanged;
-                Game game = new Game() { maincanvas = mainCanvas, mainWindow = mainWindow, book = BookNumber, lvlnum = o.Lvl };
+                Game game = new Game() { mainCanvas = mainCanvas, mainWindow = mainWindow, book = BookNumber, lvlnum = o.Lvl };
                 game.Build();
             }
         }

@@ -50,14 +50,14 @@ namespace MAH
             src3.EndInit();
             BackButton = new Image { Source = src3 };
             mainCanvas.Children.Add(BackButton);
-            Books[0].MouseEnter += BooksMouseEnter;
-            Books[0].MouseLeave += BooksMouseExit;
-            Books[1].MouseEnter += BooksMouseEnter;
-            Books[1].MouseLeave += BooksMouseExit;
-            Books[2].MouseEnter += BooksMouseEnter;
-            Books[2].MouseLeave += BooksMouseExit;
-            BackButton.MouseEnter += BooksMouseEnter;
-            BackButton.MouseLeave += BooksMouseExit;
+            Books[0].MouseEnter += ImageMouseEnter;
+            Books[0].MouseLeave += ImageMouseLeave;
+            Books[1].MouseEnter += ImageMouseEnter;
+            Books[1].MouseLeave += ImageMouseLeave;
+            Books[2].MouseEnter += ImageMouseEnter;
+            Books[2].MouseLeave += ImageMouseLeave;
+            BackButton.MouseEnter += ImageMouseEnter;
+            BackButton.MouseLeave += ImageMouseLeave;
             BackButton.MouseUp += Back;
             Books[0].MouseUp += B1;
             Books[1].MouseUp += B2;
@@ -92,25 +92,25 @@ namespace MAH
             BackButton.Height = lvCanvas.Height / 6;
             BackButton.Width = lvCanvas.Height / 2;
         }
-        private void BooksMouseEnter(object sender, MouseEventArgs e)
+        private void ImageMouseEnter(object sender, MouseEventArgs e)
         {
-            Image s = (Image)sender;
-            Thickness margin = s.Margin;
-            margin.Top -= lvCanvas.Height / 20;
-            margin.Left -= lvCanvas.Width / 60;
-            s.Margin = margin;
-            s.Height += lvCanvas.Height / 10;
-            s.Width += lvCanvas.Width / 30;
+            Image o = (Image)sender;
+            Thickness margin = o.Margin;
+            margin.Top = o.Margin.Top - o.Height / 20;
+            margin.Left = o.Margin.Left - o.Width / 20;
+            o.Height = o.Height / 10 * 11;
+            o.Width = o.Width * 11 / 10;
+            o.Margin = margin;
         }
-        private void BooksMouseExit(object sender, MouseEventArgs e)
+        private void ImageMouseLeave(object sender, MouseEventArgs e)
         {
-            Image s = (Image)sender;
-            Thickness margin = s.Margin;
-            margin.Top += lvCanvas.Height / 20;
-            margin.Left += lvCanvas.Width / 60;
-            s.Margin = margin;
-            s.Height -= lvCanvas.Height  / 10;
-            s.Width -= lvCanvas.Width / 30;
+            Image o = (Image)sender;
+            Thickness margin = o.Margin;
+            o.Height = o.Height / 11 * 10;
+            o.Width = o.Width * 10 / 11;
+            margin.Top = o.Margin.Top + o.Height / 20;
+            margin.Left = o.Margin.Left + o.Width / 20;
+            o.Margin = margin;
         }
         private void Back(object sender, MouseEventArgs e)
         {
