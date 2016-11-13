@@ -48,6 +48,7 @@ namespace MAH
                 lvls[i].MouseEnter += ImageMouseEnter;
                 lvls[i].MouseLeave += ImageMouseLeave;
                 lvls[i].MouseUp += Start;
+                lvls[i].Lvl = i;
             }
             BitmapImage src3 = new BitmapImage();
             src3.BeginInit();

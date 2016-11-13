@@ -111,5 +111,25 @@ namespace MAH
             }
             return "Back";
         }
+        static public string MouseOver()
+        {
+            switch (language)
+            {
+                case 0:
+                    return "Мышь вне поля";
+                    break;
+            }
+            return "Mouse over the fied";
+        }
+        static public string Ready()
+        {
+            switch (language)
+            {
+                case 0:
+                    return "Готов";
+                    break;
+            }
+            return "Ready";
+        }
     }
 }

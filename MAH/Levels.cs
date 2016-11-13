@@ -14,8 +14,8 @@ namespace MAH
     static class Levels
     {
         //5 0 0
-        public static int[] LevelsNumber = new int[3] { 100, 1, 0};
-        public delegate pair LevelHandler(int i, int j);  
+        public static int[] LevelsNumber = new int[3] { 5, 1, 0};
+        public delegate pair LevelHandler(int i, int j);   
         public static Level Init(int book, int lvl)
         {
             if(book == 0)
